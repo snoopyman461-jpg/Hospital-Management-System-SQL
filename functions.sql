@@ -1,8 +1,6 @@
-USE HospitalManagementSystem;
-GO
 
---------------------------------------------------
--- 1. Function: حساب إجمالي أيام الإقامة للمريض بداخل المستشفى
+
+-- 1. Function:    
 --------------------------------------------------
 CREATE OR ALTER FUNCTION dbo.fn_CalculateStayDuration (@AdmissionID INT)
 RETURNS INT
@@ -19,7 +17,7 @@ END;
 GO
 
 --------------------------------------------------
--- 2. Function: حساب إجمالي تكلفة الأدوية الموصوفة في روشتة معينة
+-- 2. Function
 --------------------------------------------------
 CREATE OR ALTER FUNCTION dbo.fn_GetPrescriptionTotalCost (@PrescriptionID INT)
 RETURNS DECIMAL(10,2)
@@ -37,7 +35,7 @@ END;
 GO
 
 --------------------------------------------------
--- 3. Function: الحصول على الاسم الكامل للمريض
+-- 3. Function:     
 --------------------------------------------------
 CREATE OR ALTER FUNCTION dbo.fn_GetPatientFullName (@PatientID INT)
 RETURNS NVARCHAR(100)
@@ -72,7 +70,7 @@ END;
 GO
 
 --------------------------------------------------
--- 5. Inline Table-Valued Function: إرجاع قائمة المرضى حسب مستوى الطوارئ (Triage Level)
+-- 5. Inline Table-Valued Function: (Triage Level)
 --------------------------------------------------
 CREATE OR ALTER FUNCTION dbo.fn_GetPatientsByTriageLevel (@TriageLevel INT)
 RETURNS TABLE
